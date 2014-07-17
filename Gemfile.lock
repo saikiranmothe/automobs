@@ -33,6 +33,11 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.0.4)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -40,6 +45,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
+    daemon_controller (1.2.0)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -76,6 +82,10 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
+    passenger (4.0.46)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.4.5)
@@ -96,6 +106,9 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_admin (0.4.9)
       bootstrap-sass (~> 2.2)
       builder (~> 3.0)
@@ -112,6 +125,8 @@ GEM
       safe_yaml (~> 0.6)
       sass-rails (~> 3.1)
     rails_layout (1.0.19)
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -124,6 +139,7 @@ GEM
       json (~> 1.4)
     ref (1.0.5)
     remotipart (1.2.1)
+    rmagick (2.13.2)
     safe_yaml (0.9.7)
     sass (3.3.10)
     sass-rails (3.2.6)
@@ -157,13 +173,17 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  carrierwave
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  passenger
   pg
   rails (= 3.2.13)
+  rails_12factor
   rails_admin
   rails_layout
+  rmagick
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer

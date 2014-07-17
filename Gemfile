@@ -10,7 +10,18 @@ gem 'sqlite3'
 
 group :production do
 	gem 'pg'
+	gem 'passenger'
+	gem 'rails_12factor'
+
 end
+
+
+
+
+#Uploading Functionality
+gem "rmagick"
+gem "carrierwave"
+
 gem 'bootstrap-sass'
 
 
