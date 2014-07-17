@@ -1,0 +1,153 @@
+== AutoMObs
+
+Central Collabrative Platform for Automobile Industry
+====================================================
+
+Users
+Showroom
+Industries
+Dealers
+
+
+Users Flow
+===================
+
+  User can login with social logins(facebook/twitter/google)
+    
+
+
+    1.users create their portfolio
+    2.they create/update thier vechicles.
+         vechicle --> 
+    3.Users can esaily check thier mileage with mileage calculator
+    4.We show reports of Usage.
+    5.Maintance Reports.
+
+
+
+Dealer Flow
+-================
+
+
+
+
+
+
+Industry Flow
+=================
+
+
+
+
+Mechanic/Repairer Flow
+======================
+
+
+
+
+
+
+
+
+
+
+
+Users
+=====
+email
+password
+password_confirmation
+role:
+firstname:
+lastname:
+mobile_number:
+
+
+
+Vechicle
+=====
+image
+name:
+brand:
+model:
+cc:
+registration_number: 
+
+
+Maintance
+=========
+date:
+em
+amonut:
+
+
+
+
+
+
+
+
+Mechanic Shops
+======
+name
+website
+address:
+website:
+
+
+
+
+Show Rooms/Delaers
+=======
+  Show Room Login
+===========
+
+
+
+ 
+
+
+ShowRoom Portfolio
+==================
+name:
+address:
+image:
+banner:
+facebook:
+
+
+
+Industries
+===========
+name:
+
+
+
+
+has_many :vechicles
+
+
+
+
+
+
+RELATIONS
+++++++++++++++++++++
+
+
+       has_many
+Users   ----->    Vechicles
+      belongs_to  
+
+                   has_many
+ShowRoom/delaers   ---------->  Show ROOM PORTFOLIO
+                   belongs_to
+
+
+                        has_many
+ShowRoomPortfolio      ------------->  Vechicles       
+                        belongs_to
+
+                        has_many
+Industry                 ------------>  Dealers
+                        belongs_to
